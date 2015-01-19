@@ -7,5 +7,5 @@ import (
 
 func main() {
 	ip := ip.GetActualIPAddress()
-	fmt.Printf("content : %s", ip)
+	fmt.Printf("mon adresse IP externe : %s\n", ip)
 }
