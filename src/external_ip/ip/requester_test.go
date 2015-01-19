@@ -2,11 +2,13 @@ package ip
 
 import (
 	"github.com/stretchr/testify/assert"
+	"regexp"
 	"testing"
 )
 
 func TestCanGetIP(test *testing.T) {
-	ip := GetIPAddress()
+	ip := GetActualIPAddress()
 
-	assert.Equal(test, "83.200.184.130", ip)
+	matched, _ := regexp.MatchString("^\\d{1,3}.\\d{1,3}.\\d{1,3}.\\d{1,3}$", ip)
+	assert.True(test, matched)
 }
