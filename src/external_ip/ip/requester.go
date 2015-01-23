@@ -7,7 +7,7 @@ import (
 	"net/http"
 )
 
-func GetActualIPAddress() string {
+func GetExternalIPAddress() string {
 	body := sendRequest("http://www.adresseip.com")
 
 	document, err := gokogiri.ParseHtml(body)
